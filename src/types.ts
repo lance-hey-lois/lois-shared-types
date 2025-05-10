@@ -73,7 +73,7 @@ export interface PrivateProfile extends BaseProfile {
   _id: ObjectId;
   userId: string; // Link to the user owner (Using string 'slug' based on TempMessage example)
   slug?: string; // Unique identifier for the profile itself
-  include?: boolean; // Added include property
+  showInNetworkSearch?: boolean; // Added showInNetworkSearch property
   relationshipStrength?: { // Using the more detailed structure
     score?: number;
     assessment?: string; // Renamed from relationshipAssessment
