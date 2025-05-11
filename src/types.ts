@@ -84,6 +84,7 @@ export interface PrivateProfile extends BaseProfile {
       responseRate?: number;
     };
   };
+  relationshipScore?: number;
   lastContacted?: Date;
   initialProcessedAt?: Date;
 }
