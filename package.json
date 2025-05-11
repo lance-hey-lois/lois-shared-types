@@ -1,6 +1,6 @@
 {
   "name": "@lance-hey-lois/lois-shared-types",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Shared TypeScript types for the Lois eco-system",
   "main": "dist/types.js",
   "types": "dist/types.d.ts",
