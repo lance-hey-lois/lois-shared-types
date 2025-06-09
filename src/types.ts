@@ -110,3 +110,29 @@ export interface ContactInfo {
   linkedIn?: string;
   locatedIn?: string;
 }
+
+/**
+ * Canonical normalized user document for the Lois ecosystem.
+ * Suitable for both backend and frontend use.
+ */
+export interface User {
+  _id: ObjectId; // Imported from 'mongodb'
+  slug: string; // unique user slug, required
+  userId: string; // should always match slug
+  name: string;
+  email: string;
+  emails?: string[]; // Optional, for aliases/history
+  image?: string; // avatar, optional
+  createdAt?: Date | string; // Optional
+  updatedAt?: Date | string; // Optional
+  lastLogin?: Date | string; // Optional
+  googleRefreshToken?: string; // Optional
+  googleTokenUpdatedAt?: Date | string; // Optional
+  stripeCustomerId?: string; // Optional
+  stripeCustomerEmail?: string; // Optional
+  gmailImportState?: { // Optional
+    status: 'pending' | 'processing' | 'complete' | 'error';
+    lastError?: string | null;
+    [key: string]: unknown; // Extensible for other tracking fields
+  };
+}
